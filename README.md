@@ -84,6 +84,6 @@ the mathematical model of our problem.
 First of all you have to install an AMPL (see official online documentation).
 Then you have to run the following command after you have launched it:
 ```ampl
-include distanziamento.run
+include distanziamento.run;
 ```
 The distanziamento.run file contains all the istructions needed to execute the code.
