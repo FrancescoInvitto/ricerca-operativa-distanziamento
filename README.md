@@ -14,7 +14,7 @@ The variables represent all those quantities which, unlike the data, are below t
 x_i = {
     1 if the place i is occupied
     0 otherwise
-}
+
 ```
 
 ## Constraints
@@ -36,11 +36,15 @@ Observe that only the variables that are associated with occupied seats will pro
 By putting all the components together we can then derive the mathematical model for our problem:
 ```math
 max \sum_{i=1}^{n} x_i
-
+```
 subject to:
-
+```math
 x_i + x_j ≤ 1   ∀ i, j : d_{ij} < d_{min}
+```
+```math
 0 ≤ x_i ≤ 1
+```
+```math
 x_i ∈ Z         ∀ i = 1, ..., n
 ```
 where the last line relates to the binary constraint of the variables. Now let's translate the mathematical model “on paper” into AMPL language; we have to
