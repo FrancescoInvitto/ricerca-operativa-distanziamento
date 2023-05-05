@@ -1,0 +1,33 @@
+reset;
+option solver gurobi;
+model distanziamento/distanziamento.MOD;
+data distanziamento/distanziamento.DAT;
+solve;
+display dmin;
+display d;
+display x;
+
+let dmin := 0.75;
+solve;
+display dmin;
+display d;
+display x;
+
+let dmin := dmin +0.25;
+for{(i,j) in DISTANZE}{
+	if(d[i,j] == 1)
+		then{let d[i,j] := d[i,j] - 0.2;}	
+	if(d[i,j] == 1.08)
+		then{let d[i,j] := d[i,j] - 0.19;}
+	if(d[i,j] == 2)
+		then{let d[i,j] := d[i,j] - 0.4;}
+	if(d[i,j] == 2.04)
+		then{let d[i,j] := d[i,j] - 0.39;}
+	if(d[i,j] == 2.15)
+		then{let d[i,j] := d[i,j] - 0.36;}
+}
+
+solve;
+display dmin;
+display d;
+display x;
