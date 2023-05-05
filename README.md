@@ -12,9 +12,9 @@ The data represent all those quantities that are not under the direct control of
 The variables represent all those quantities which, unlike the data, are below the direct control of the decision maker, who can therefore modify its value. In our case we have associated a binary variable x_i to each place in the classroom with the following meaning:
 ```math
 x_i = {
-    1 if the place i is occupied
+    1 if the place i is occupied,
     0 otherwise
-
+}
 ```
 
 ## Constraints
