@@ -79,3 +79,11 @@ Finally, the goal of the problem must also be translated into AMPL, which is don
 maximize seats_occupied : sum{i in SEATS} x[i];
 The keyword "maximize" tells us that ours is a problem of maximum, the goal formula is easily understood as the sum of the binary variables associated with each single seat in the classroom, exactly as we have commented earlier. By putting everything together we can create the spacing.mod file, which contains
 the mathematical model of our problem.
+
+# How to run the code
+First of all you have to install an AMPL (see official online documentation).
+Then you have to run the following command after you have launched it:
+```ampl
+include distanziamento.run
+```
+The distanziamento.run file contains all the istructions needed to execute the code.
